@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="style.css" rel="stylesheet" >
+
+
+</head>
+
+<body>
+
+	<header>
+		<div class ="header-1">
+			<img src ="logo_epicerie.PNG" >
+	</header>
+
+<!-- Tab links, each one with an onclick event associated with it -->
+<div class="tab">
+  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+  <button class="tablinks" onclick="openInfo(event, 'Products')">Produits</button>
+  <button class="tablinks" onclick="openInfo(event, 'Panier')">Panier</button>
+</div>
+
+<!-- Tab content -->
+<div id="Client" class="tabcontent">
+  <h3>Information du client</h3>
+  <p>Dites nous un peu sur vos preferences alimentaires</p>
+	Choisissez votre category:
+	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	<option value=""></option>
+	<option value="Sans-Lactose">Sans-Lactose</option>
+    <option value="Organique">Organique</option>
+		<option value="Sans_Noix">Sans_Noix</option>
+    <option value="Aucun">Aucun</option>
+	</select>
+</div>
+
+<div id="Products" class="tabcontent">
+  <h3>Vos produits</h3>
+  <p>Nous avons pre-selectionne vous produits en fonction de vos restrictions</p>
+	 Choisissez les produits que vous souhaitez acheter :
+	 <div id="displayProduct"></div>
+	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
+		Ajouter les produits selectionner dans votre panier.
+	</button>
+</div>
+
+
+<div id="Panier" class="tabcontent">
+  <h3>Panier</h3>
+  <p>Voici votre Panier.</p>
+  <div id="displayCart"></div>
+</div>
+
+<script src="groceries.js"></script>
+<script src="main.js"></script>
+
+</body>
+<br>
+<footer>
+	<h4 class ="credit" style="color:black;"> cree par <span > Nafissatu</span> </h4>
+</footer>
+</html>

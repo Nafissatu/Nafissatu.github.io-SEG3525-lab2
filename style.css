@@ -1,0 +1,51 @@
+/* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
+
+/* Style the tab */
+body {
+  background-color:snow;
+  background-image:url("food3.jpg");
+}
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f2f2f2;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.footer h1.credit{
+  padding:2.5rem 1rem;
+  border-top: .1rem solid rgba(255, 0, 0, 0.5);
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+.footer h1.credit span{
+  color: purple;
+}
